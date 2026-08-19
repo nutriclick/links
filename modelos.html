@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nutri Click | Escolha o modelo do seu link na bio</title>
+<meta name="description" content="Veja os seis modelos de link na bio da Nutri Click e escolha o seu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F1F8F4;
+    --ink: #0B4F44;
+    --ink-soft: rgba(11, 79, 68, .68);
+    --line: rgba(11, 79, 68, .14);
+    --card: #FFFFFF;
+    --aqua: #17A98B;
+    --aqua-soft: #DCF0E9;
+    --bezel: #0E3B34;
+    --s: .70;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Sora', sans-serif;
+    background:
+      radial-gradient(900px 500px at 85% -10%, rgba(23, 169, 139, .10), transparent 60%),
+      radial-gradient(700px 460px at 0% 100%, rgba(23, 169, 139, .08), transparent 55%),
+      var(--bg);
+    color: var(--ink);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 56px 20px 72px; }
+
+  header { text-align: center; margin-bottom: 52px; }
+  .logo { width: min(230px, 58vw); height: auto; display: inline-block; }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(1.7rem, 4.2vw, 2.6rem);
+    line-height: 1.15;
+    letter-spacing: -.01em;
+    margin-top: 26px;
+  }
+  .sub {
+    margin-top: 14px;
+    color: var(--ink-soft);
+    font-size: clamp(.92rem, 2vw, 1rem);
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 28px;
+    justify-items: center;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 26px;
+    padding: 22px 22px 24px;
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 14px 34px -22px rgba(11, 79, 68, .28);
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 44px -22px rgba(11, 79, 68, .34);
+  }
+
+  .card-head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  .card-num {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.12rem;
+  }
+  .card-tag {
+    font-size: .68rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--aqua);
+    background: var(--aqua-soft);
+    padding: 6px 12px;
+    border-radius: 999px;
+  }
+
+  .phone {
+    position: relative;
+    background: var(--bezel);
+    border-radius: 42px;
+    padding: 10px;
+    box-shadow:
+      inset 0 0 0 2px rgba(255, 255, 255, .06),
+      0 18px 38px -18px rgba(11, 79, 68, .45);
+  }
+  .phone-notch {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 84px;
+    height: 22px;
+    background: var(--bezel);
+    border-radius: 999px;
+    z-index: 2;
+  }
+  .phone-screen {
+    width: calc(390px * var(--s));
+    height: calc(800px * var(--s));
+    border-radius: 34px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .phone-screen iframe {
+    width: 390px;
+    height: 800px;
+    border: 0;
+    transform: scale(var(--s));
+    transform-origin: top left;
+    display: block;
+  }
+
+  .btn {
+    margin-top: 20px;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--ink);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .95rem;
+    padding: 15px 20px;
+    border-radius: 999px;
+    transition: background .2s ease, transform .2s ease;
+  }
+  .btn svg { width: 19px; height: 19px; flex: none; }
+  .btn:hover { background: var(--aqua); transform: translateY(-2px); }
+  .btn:focus-visible { outline: 3px solid var(--aqua); outline-offset: 3px; }
+
+  footer {
+    margin-top: 56px;
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: .82rem;
+  }
+  footer a { color: var(--ink); font-weight: 600; text-decoration: none; }
+  footer a:hover { color: var(--aqua); }
+
+  @media (max-width: 400px) {
+    :root { --s: .62; }
+    .card { padding: 18px 14px 20px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <svg class="logo" role="img" aria-label="Nutri Click" viewBox="-700 -2260 12162 3520" xmlns="http://www.w3.org/2000/svg">
+<g fill="#0B4F44">
+<path d="M574 -904V-284Q574 -227 579.5 -206.0Q585 -185 600 -174L616 -162Q654 -134 654 -86Q654 0 570 0H152Q109 0 83.5 -23.0Q58 -46 58 -86Q58 -116 71.0 -137.0Q84 -158 108 -174L122 -184Q136 -195 143.0 -214.0Q150 -233 150 -284V-610Q150 -655 139.0 -671.5Q128 -688 110 -698L96 -706Q74 -720 60.0 -737.0Q46 -754 46 -782Q46 -814 65.0 -836.0Q84 -858 126 -874L338 -956Q389 -976 422.0 -985.0Q455 -994 492 -994Q530 -994 552.0 -968.5Q574 -943 574 -904ZM538 -620 462 -708 508 -752Q649 -887 753.0 -940.5Q857 -994 944 -994Q1078 -994 1160.0 -905.5Q1242 -817 1242 -674V-284Q1242 -233 1249.0 -213.5Q1256 -194 1270 -184L1284 -174Q1308 -156 1321.0 -136.0Q1334 -116 1334 -86Q1334 -46 1309.0 -23.0Q1284 0 1240 0H822Q738 0 738 -86Q738 -134 776 -162L792 -174Q807 -185 812.5 -206.0Q818 -227 818 -284V-572Q818 -634 789.5 -667.0Q761 -700 708 -700Q675 -700 640.0 -690.0Q605 -680 572 -650Z"/>
+<path d="M2168 -180V-220L2148 -224V-610Q2148 -655 2137.0 -671.5Q2126 -688 2108 -698L2094 -706Q2072 -720 2058.0 -737.0Q2044 -754 2044 -782Q2044 -814 2063.0 -836.0Q2082 -858 2124 -874L2336 -956Q2387 -976 2420.0 -985.0Q2453 -994 2490 -994Q2528 -994 2550.0 -968.5Q2572 -943 2572 -904V-284Q2572 -233 2579.5 -214.0Q2587 -195 2600 -184L2614 -174Q2638 -158 2651.0 -137.0Q2664 -116 2664 -86Q2664 -46 2639.0 -23.0Q2614 0 2570 0H2350Q2278 0 2223.0 -52.5Q2168 -105 2168 -180ZM1502 -292V-610Q1502 -655 1491.0 -671.5Q1480 -688 1462 -698L1448 -706Q1426 -720 1412.0 -737.0Q1398 -754 1398 -782Q1398 -814 1417.0 -836.0Q1436 -858 1478 -874L1690 -956Q1741 -976 1774.0 -985.0Q1807 -994 1844 -994Q1882 -994 1904.0 -968.5Q1926 -943 1926 -904V-394Q1926 -331 1950.5 -298.5Q1975 -266 2020 -266Q2050 -266 2079.5 -276.0Q2109 -286 2140 -314L2174 -346L2250 -258L2204 -214Q2066 -82 1967.0 -27.0Q1868 28 1784 28Q1658 28 1580.0 -61.0Q1502 -150 1502 -292Z"/>
+<path d="M2807 -788 2793 -796Q2768 -810 2753.0 -829.5Q2738 -849 2738 -880Q2738 -917 2764.0 -940.5Q2790 -964 2830 -964H2874Q2894 -964 2914.5 -980.0Q2935 -996 2962 -1032L3050 -1150Q3078 -1188 3115.5 -1214.0Q3153 -1240 3186 -1240Q3231 -1240 3258.5 -1214.0Q3286 -1188 3286 -1140V-394Q3286 -331 3310.0 -298.5Q3334 -266 3382 -266Q3412 -266 3435.0 -279.0Q3458 -292 3476.5 -309.5Q3495 -327 3512.0 -339.5Q3529 -352 3547 -350Q3566 -349 3579.0 -331.5Q3592 -314 3592 -284Q3592 -202 3541.0 -130.5Q3490 -59 3404.0 -15.5Q3318 28 3214 28Q3043 28 2952.5 -50.5Q2862 -129 2862 -292V-700Q2862 -745 2846.5 -760.0Q2831 -775 2807 -788ZM3140 -764V-964H3508Q3549 -964 3572.5 -945.0Q3596 -926 3596 -890Q3596 -836 3549.0 -800.0Q3502 -764 3392 -764Z"/>
+<path d="M4144 -528Q4144 -690 4183.5 -793.0Q4223 -896 4293.0 -945.0Q4363 -994 4454 -994Q4552 -994 4609.0 -929.0Q4666 -864 4666 -734Q4666 -604 4614.5 -544.0Q4563 -484 4479 -484Q4392 -484 4348.0 -523.0Q4304 -562 4304 -629V-672Q4304 -700 4292.0 -713.0Q4280 -726 4260 -726Q4240 -726 4224.0 -707.5Q4208 -689 4199.0 -651.5Q4190 -614 4190 -558ZM4164 -892 4190 -696V-284Q4190 -237 4202.5 -213.0Q4215 -189 4246 -184L4316 -174Q4354 -169 4370.0 -145.0Q4386 -121 4386 -86Q4386 -46 4361.0 -23.0Q4336 0 4292 0H3778Q3735 0 3709.5 -23.0Q3684 -46 3684 -86Q3684 -116 3697.0 -136.5Q3710 -157 3734 -174L3748 -184Q3762 -194 3769.0 -213.5Q3776 -233 3776 -284V-610Q3776 -655 3765.0 -671.5Q3754 -688 3736 -698L3722 -706Q3700 -719 3686.0 -736.5Q3672 -754 3672 -782Q3672 -814 3691.0 -836.0Q3710 -858 3752 -874L3964 -956Q4008 -973 4037.5 -983.5Q4067 -994 4090 -994Q4120 -994 4138.5 -972.0Q4157 -950 4164 -892Z"/>
+<path d="M5260 -904V-284Q5260 -233 5267.5 -214.0Q5275 -195 5288 -184L5302 -174Q5326 -158 5339.0 -137.0Q5352 -116 5352 -86Q5352 -46 5327.0 -23.0Q5302 0 5258 0H4838Q4795 0 4769.5 -23.0Q4744 -46 4744 -86Q4744 -116 4757.0 -137.0Q4770 -158 4794 -174L4808 -184Q4822 -195 4829.0 -214.0Q4836 -233 4836 -284V-610Q4836 -655 4825.0 -671.5Q4814 -688 4796 -698L4782 -706Q4760 -720 4746.0 -737.0Q4732 -754 4732 -782Q4732 -814 4751.0 -836.0Q4770 -858 4812 -874L5024 -956Q5075 -976 5108.0 -985.0Q5141 -994 5178 -994Q5216 -994 5238.0 -968.5Q5260 -943 5260 -904Z"/>
+<path d="M6853 -685Q6853 -608 6795.5 -555.5Q6738 -503 6642 -503Q6549 -503 6502.5 -552.5Q6456 -602 6456 -679V-711Q6456 -751 6429.0 -773.5Q6402 -796 6358 -796Q6323 -796 6292.5 -774.0Q6262 -752 6243.0 -707.5Q6224 -663 6224 -595Q6224 -489 6263.5 -418.0Q6303 -347 6370.0 -312.0Q6437 -277 6520 -277Q6588 -277 6637.0 -291.5Q6686 -306 6735 -341Q6765 -363 6780.5 -371.5Q6796 -380 6810 -379Q6833 -378 6846.0 -362.0Q6859 -346 6859 -310Q6859 -221 6799.5 -143.5Q6740 -66 6634.0 -19.0Q6528 28 6388 28Q6235 28 6113.5 -32.5Q5992 -93 5921.0 -201.5Q5850 -310 5850 -455Q5850 -610 5918.5 -732.0Q5987 -854 6112.5 -924.0Q6238 -994 6409 -994Q6546 -994 6645.5 -952.5Q6745 -911 6799.0 -841.0Q6853 -771 6853 -685Z"/>
+<path d="M7489 -1420V-284Q7489 -233 7496.5 -214.0Q7504 -195 7517 -184L7531 -174Q7555 -158 7568.0 -137.0Q7581 -116 7581 -86Q7581 -46 7556.0 -23.0Q7531 0 7487 0H7067Q7024 0 6998.5 -23.0Q6973 -46 6973 -86Q6973 -116 6986.0 -137.0Q6999 -158 7023 -174L7037 -184Q7051 -195 7058.0 -214.0Q7065 -233 7065 -284V-1126Q7065 -1171 7054.0 -1187.5Q7043 -1204 7025 -1214L7011 -1222Q6989 -1235 6975.0 -1252.5Q6961 -1270 6961 -1298Q6961 -1330 6980.0 -1352.0Q6999 -1374 7041 -1390L7253 -1472Q7304 -1492 7337.0 -1501.0Q7370 -1510 7407 -1510Q7445 -1510 7467.0 -1484.5Q7489 -1459 7489 -1420Z"/>
+<path d="M8193 -904V-284Q8193 -233 8200.5 -214.0Q8208 -195 8221 -184L8235 -174Q8259 -158 8272.0 -137.0Q8285 -116 8285 -86Q8285 -46 8260.0 -23.0Q8235 0 8191 0H7771Q7728 0 7702.5 -23.0Q7677 -46 7677 -86Q7677 -116 7690.0 -137.0Q7703 -158 7727 -174L7741 -184Q7755 -195 7762.0 -214.0Q7769 -233 7769 -284V-610Q7769 -655 7758.0 -671.5Q7747 -688 7729 -698L7715 -706Q7693 -720 7679.0 -737.0Q7665 -754 7665 -782Q7665 -814 7684.0 -836.0Q7703 -858 7745 -874L7957 -956Q8008 -976 8041.0 -985.0Q8074 -994 8111 -994Q8149 -994 8171.0 -968.5Q8193 -943 8193 -904Z"/>
+<path d="M9376 -685Q9376 -608 9318.5 -555.5Q9261 -503 9165 -503Q9072 -503 9025.5 -552.5Q8979 -602 8979 -679V-711Q8979 -751 8952.0 -773.5Q8925 -796 8881 -796Q8846 -796 8815.5 -774.0Q8785 -752 8766.0 -707.5Q8747 -663 8747 -595Q8747 -489 8786.5 -418.0Q8826 -347 8893.0 -312.0Q8960 -277 9043 -277Q9111 -277 9160.0 -291.5Q9209 -306 9258 -341Q9288 -363 9303.5 -371.5Q9319 -380 9333 -379Q9356 -378 9369.0 -362.0Q9382 -346 9382 -310Q9382 -221 9322.5 -143.5Q9263 -66 9157.0 -19.0Q9051 28 8911 28Q8758 28 8636.5 -32.5Q8515 -93 8444.0 -201.5Q8373 -310 8373 -455Q8373 -610 8441.5 -732.0Q8510 -854 8635.5 -924.0Q8761 -994 8932 -994Q9069 -994 9168.5 -952.5Q9268 -911 9322.0 -841.0Q9376 -771 9376 -685Z"/>
+<path d="M9590 0Q9547 0 9521.5 -23.0Q9496 -46 9496 -86Q9496 -116 9509.0 -137.0Q9522 -158 9546 -174L9560 -184Q9574 -195 9581.0 -214.0Q9588 -233 9588 -284V-1126Q9588 -1171 9577.0 -1187.5Q9566 -1204 9548 -1214L9534 -1222Q9512 -1235 9498.0 -1252.5Q9484 -1270 9484 -1298Q9484 -1330 9503.0 -1352.0Q9522 -1374 9564 -1390L9776 -1472Q9827 -1492 9860.0 -1501.0Q9893 -1510 9930 -1510Q9968 -1510 9990.0 -1484.5Q10012 -1459 10012 -1420V-284Q10012 -227 10017.5 -206.0Q10023 -185 10038 -174L10054 -162Q10092 -134 10092 -86Q10092 0 10008 0ZM9882 -437 10248 -729Q10271 -746 10270.5 -759.0Q10270 -772 10248 -788L10230 -801Q10213 -816 10204.0 -834.5Q10195 -853 10195 -878Q10195 -919 10220.5 -941.5Q10246 -964 10289 -964H10647Q10691 -964 10716.0 -941.5Q10741 -919 10741 -878Q10741 -843 10720.0 -815.0Q10699 -787 10634 -772Q10600 -765 10564.0 -751.5Q10528 -738 10467 -691L9946 -284ZM10311 -730 10648 -254Q10665 -230 10678.0 -216.0Q10691 -202 10710 -185Q10739 -160 10758.5 -135.5Q10778 -111 10778 -81Q10778 -43 10753.0 -21.5Q10728 0 10684 0H10260Q10223 0 10199.5 -23.0Q10176 -46 10176 -86Q10176 -109 10184.0 -125.5Q10192 -142 10208 -155L10224 -168Q10253 -188 10241.5 -209.0Q10230 -230 10208 -262L10042 -502Z"/>
+<path d="M 5018 -1094 C 5248 -1114 5348 -1354 5198 -1574 C 4958 -1474 4878 -1234 5018 -1094 Z"/>
+<path d="M 7951 -1094 C 8181 -1114 8281 -1354 8131 -1574 C 7891 -1474 7811 -1234 7951 -1094 Z"/>
+</g></svg>
+      <h1>Escolha o modelo do seu link na bio</h1>
+      <p class="sub">Navegue pelas prévias abaixo. Cada tela é interativa, você pode rolar e clicar como se estivesse no celular. Encontrou o seu? É só tocar no botão.</p>
+    </header>
+
+    <main class="grid">
+      <article class="card">
+        <div class="card-head">
+          <span class="card-num">Modelo 01</span>
+          <span class="card-tag">Orgânico</span>
+        </div>
+        <div class="phone">
+          <span class="phone-notch" aria-hidden="true"></span>
+          <div class="phone-screen">
+            <iframe src="modelo-01-organico.html" title="Prévia do modelo 01 Orgânico" loading="lazy"></iframe>
+          </div>
+        </div>
+        <a class="btn" href="https://wa.me/5562981282534?text=Eu%20quero%20o%20modelo%201" target="_blank" rel="noopener">Escolher modelo 01
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.1 8.1 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3Z"/></svg>
+        </a>
+      </article>
+      <article class="card">
+        <div class="card-head">
+          <span class="card-num">Modelo 02</span>
+          <span class="card-tag">Neon</span>
+        </div>
+        <div class="phone">
+          <span class="phone-notch" aria-hidden="true"></span>
+          <div class="phone-screen">
+            <iframe src="modelo-02-neon.html" title="Prévia do modelo 02 Neon" loading="lazy"></iframe>
+          </div>
+        </div>
+        <a class="btn" href="https://wa.me/5562981282534?text=Eu%20quero%20o%20modelo%202" target="_blank" rel="noopener">Escolher modelo 02
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.1 8.1 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3Z"/></svg>
+        </a>
+      </article>
+      <article class="card">
+        <div class="card-head">
+          <span class="card-num">Modelo 03</span>
+          <span class="card-tag">Editorial</span>
+        </div>
+        <div class="phone">
+          <span class="phone-notch" aria-hidden="true"></span>
+          <div class="phone-screen">
+            <iframe src="modelo-03-editorial.html" title="Prévia do modelo 03 Editorial" loading="lazy"></iframe>
+          </div>
+        </div>
+        <a class="btn" href="https://wa.me/5562981282534?text=Eu%20quero%20o%20modelo%203" target="_blank" rel="noopener">Escolher modelo 03
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.1 8.1 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3Z"/></svg>
+        </a>
+      </article>
+      <article class="card">
+        <div class="card-head">
+          <span class="card-num">Modelo 04</span>
+          <span class="card-tag">Clássico</span>
+        </div>
+        <div class="phone">
+          <span class="phone-notch" aria-hidden="true"></span>
+          <div class="phone-screen">
+            <iframe src="modelo-04-nutri.html" title="Prévia do modelo 04 Clássico" loading="lazy"></iframe>
+          </div>
+        </div>
+        <a class="btn" href="https://wa.me/5562981282534?text=Eu%20quero%20o%20modelo%204" target="_blank" rel="noopener">Escolher modelo 04
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.1 8.1 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3Z"/></svg>
+        </a>
+      </article>
+      <article class="card">
+        <div class="card-head">
+          <span class="card-num">Modelo 05</span>
+          <span class="card-tag">Luxo</span>
+        </div>
+        <div class="phone">
+          <span class="phone-notch" aria-hidden="true"></span>
+          <div class="phone-screen">
+            <iframe src="modelo-05-luxo.html" title="Prévia do modelo 05 Luxo" loading="lazy"></iframe>
+          </div>
+        </div>
+        <a class="btn" href="https://wa.me/5562981282534?text=Eu%20quero%20o%20modelo%205" target="_blank" rel="noopener">Escolher modelo 05
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.1 8.1 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3Z"/></svg>
+        </a>
+      </article>
+      <article class="card">
+        <div class="card-head">
+          <span class="card-num">Modelo 06</span>
+          <span class="card-tag">Bento</span>
+        </div>
+        <div class="phone">
+          <span class="phone-notch" aria-hidden="true"></span>
+          <div class="phone-screen">
+            <iframe src="modelo-06-bento.html" title="Prévia do modelo 06 Bento" loading="lazy"></iframe>
+          </div>
+        </div>
+        <a class="btn" href="https://wa.me/5562981282534?text=Eu%20quero%20o%20modelo%206" target="_blank" rel="noopener">Escolher modelo 06
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.1 8.1 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3Z"/></svg>
+        </a>
+      </article>
+    </main>
+
+    <footer>
+      <p>Nutri Click · <a href="https://www.instagram.com/nutriclickmkt" target="_blank" rel="noopener">@nutriclickmkt</a></p>
+    </footer>
+  </div>
+</body>
+</html>
